@@ -1556,3 +1556,9 @@ init();
 </script>
 </body>
 </html>
+
+// ALTERNATIVE FIX: Smoothly adds 1/60th of a minute every second
+let currentMins = parseFloat(document.getElementById("sessFocus").innerText) || 0;
+let newMins = currentMins + (1 / 60);
+document.getElementById("sessFocus").innerHTML = newMins.toFixed(1) + " min focused";
+
